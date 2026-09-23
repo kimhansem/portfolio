@@ -1,245 +1,241 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>oasis</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Gothic+A1:wght@400;500;600;700;800;900&
-    display=swap" rel="stylesheet">
-
-     <link rel="stylesheet" href="https://use.typekit.net/dsi8xpu.css">  <!-- 어도비 폰트 -->
-
-
-    <script src="scripts.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
-    <script src="logo.js"></script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hansem Kim — Portfolio</title>
+<meta name="description" content="Hansem Kim — graphic, editorial, motion, identity, web, interaction, installation, photography.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Gothic+A1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <header>
-        <div class="logo-container">
-            <a href="portfolio.html">
-                <div id="logo"></div>
-            </a>
-        </div>
-            
-        <div class="navContainer">
-            <ul class="nav">
-                <li class="nav-eng active" style=" color:#000;"><a href="portfolio.html">Portfolio</a></li>
-             
-                    <div class="category-div">|</div>
-                <li class="nav-eng active"><a href="cv.html">CV</a></li>
-               
-            </ul>
-        </div>
+<header class="site-header">
+  <a class="logo" href="#top" data-i18n-en="HANSEM KIM" data-i18n-ko="김한샘">HANSEM KIM</a>
 
+  <nav class="filter-nav">
+    <button class="filter-btn active" data-filter="all" data-i18n-en="All" data-i18n-ko="전체">All</button>
+    <button class="filter-btn" data-filter="graphic" data-i18n-en="Graphic" data-i18n-ko="그래픽">Graphic</button>
+    <button class="filter-btn" data-filter="editorial" data-i18n-en="Editorial" data-i18n-ko="에디토리얼">Editorial</button>
+    <button class="filter-btn" data-filter="motion" data-i18n-en="Motion" data-i18n-ko="모션">Motion</button>
+    <button class="filter-btn" data-filter="identity" data-i18n-en="Identity" data-i18n-ko="아이덴티티">Identity</button>
+    <button class="filter-btn" data-filter="web" data-i18n-en="Web" data-i18n-ko="웹">Web</button>
+    <button class="filter-btn" data-filter="interaction" data-i18n-en="Interaction" data-i18n-ko="인터랙션">Interaction</button>
+    <button class="filter-btn" data-filter="installation" data-i18n-en="Installation" data-i18n-ko="설치">Installation</button>
+    <button class="filter-btn" data-filter="photography" data-i18n-en="Photography" data-i18n-ko="포토그래피">Photography</button>
+  </nav>
 
-        <div class="category-box">
-            <div class="category" style=" color: #000; "><a href="portfolio.html">All</a></div>
-                <!-- <div class="category-div">-</div> -->
-            <div class="category"><a href="graphic.html">Graphic</a></div>
-                <!-- <div class="category-div">-</div> -->
-            <div class="category"><a href="editorial.html">Editorial</a></div>
-                <!-- <div class="category-div">-</div> -->
-            <div class="category"><a href="motion.html">Motion</a></div>
-                <!-- <div class="category-div">-</div> -->
-            <div class="category"><a href="identity.html">Identity</a></div>
-                <!-- <div class="category-div">-</div> -->
-            <div class="category"><a href="web.html">Web</a></div>    
-                <!-- <div class="category-div">-</div> -->
-            <div class="category"><a href="interaction.html">Interaction</a></div>
-                <!-- <div class="category-div">-</div> -->
-            <div class="category"><a href="installation.html">Installation</a></div>
-                <!-- <div class="category-div">-</div> -->
-            <div class="category"><a href="photography.html">Photography</a></div>  
-        </div>
+  <div class="header-actions">
+    <a class="nav-link" href="#about" data-i18n-en="About" data-i18n-ko="소개">About</a>
+    <button id="langToggle" class="lang-btn">KOR</button>
+  </div>
+</header>
 
+<main id="top">
 
+  <section class="hero">
+    <h1 data-i18n-en="Visual designer working across graphic, editorial, motion &amp; interactive media."
+        data-i18n-ko="그래픽, 에디토리얼, 모션, 인터랙티브 미디어를 오가며 작업하는 비주얼 디자이너입니다.">
+      Visual designer working across graphic, editorial, motion &amp; interactive media.
+    </h1>
+  </section>
 
-        <div class="lang">
-            <button id="toggleButton" onclick="toggleLanguage()">KOR</button>
-        </div>
-    </header>
+  <section class="grid" id="workGrid">
 
+    <article class="item" data-tags="interaction installation graphic">
+      <button class="item-media" data-full="assets/placeholders/placeholder-01.svg" data-caption-en="Manual Phase Shifter" data-caption-ko="수동위상변환장치">
+        <img src="assets/placeholders/placeholder-01.svg" alt="Manual Phase Shifter" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="Manual Phase Shifter" data-i18n-ko="수동위상변환장치">Manual Phase Shifter</p>
+      <div class="tag-box">
+        <span class="tag">#interaction</span>
+        <span class="tag">#installation</span>
+        <span class="tag">#graphic</span>
+      </div>
+    </article>
 
+    <article class="item" data-tags="graphic identity">
+      <button class="item-media" data-full="assets/placeholders/placeholder-02.svg" data-caption-en="[Basic Income Party] OKDK Supporters" data-caption-ko="[기본소득당] 오키도키 서포터즈!">
+        <img src="assets/placeholders/placeholder-02.svg" alt="OKDK Supporters" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="[Basic Income Party] OKDK Supporters" data-i18n-ko="[기본소득당] 오키도키 서포터즈!">[Basic Income Party] OKDK Supporters</p>
+      <div class="tag-box">
+        <span class="tag">#graphic</span>
+        <span class="tag">#identity</span>
+      </div>
+    </article>
 
+    <article class="item" data-tags="graphic">
+      <button class="item-media" data-full="assets/placeholders/placeholder-03.svg" data-caption-en="[Basic Income Party] Green Onion Performance Picket" data-caption-ko="[기본소득당] 대파 퍼포먼스 피켓">
+        <img src="assets/placeholders/placeholder-03.svg" alt="Green Onion Performance Picket" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="[Basic Income Party] Green Onion Performance Picket" data-i18n-ko="[기본소득당] 대파 퍼포먼스 피켓">[Basic Income Party] Green Onion Performance Picket</p>
+      <div class="tag-box">
+        <span class="tag">#graphic</span>
+      </div>
+    </article>
 
+    <article class="item" data-tags="editorial">
+      <button class="item-media" data-full="assets/placeholders/placeholder-04.svg" data-caption-en="Megastudy Russel — Doyun Ko, ⟨The Path of Literature⟩" data-caption-ko="메가스터디 러셀 — 고도연, 〈문학의도〉">
+        <img src="assets/placeholders/placeholder-04.svg" alt="The Path of Literature" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="Megastudy Russel — Doyun Ko, ⟨The Path of Literature⟩" data-i18n-ko="메가스터디 러셀 — 고도연, 〈문학의도〉">Megastudy Russel — Doyun Ko, ⟨The Path of Literature⟩</p>
+      <div class="tag-box">
+        <span class="tag">#editorial</span>
+      </div>
+    </article>
 
+    <article class="item" data-tags="editorial">
+      <button class="item-media" data-full="assets/placeholders/placeholder-05.svg" data-caption-en="Megastudy Russel — Doyun Ko, ⟨The Path of Literature⟩ (detail)" data-caption-ko="메가스터디 러셀 — 고도연, 〈문학의도〉 (상세)">
+        <img src="assets/placeholders/placeholder-05.svg" alt="The Path of Literature detail" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="⟨The Path of Literature⟩ — detail" data-i18n-ko="〈문학의도〉 — 상세">⟨The Path of Literature⟩ — detail</p>
+      <div class="tag-box">
+        <span class="tag">#editorial</span>
+      </div>
+    </article>
 
+    <article class="item" data-tags="editorial">
+      <button class="item-media" data-full="assets/placeholders/placeholder-06.svg" data-caption-en="Megastudy Russel — Doyun Ko, ⟨The Path of Literature⟩ (detail)" data-caption-ko="메가스터디 러셀 — 고도연, 〈문학의도〉 (상세)">
+        <img src="assets/placeholders/placeholder-06.svg" alt="The Path of Literature detail" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="⟨The Path of Literature⟩ — detail" data-i18n-ko="〈문학의도〉 — 상세">⟨The Path of Literature⟩ — detail</p>
+      <div class="tag-box">
+        <span class="tag">#editorial</span>
+      </div>
+    </article>
 
-    
+    <article class="item" data-tags="graphic">
+      <button class="item-media" data-full="assets/placeholders/placeholder-07.svg" data-caption-en="[Basic Income Party] 2024 Seoul Queer Parade — fan" data-caption-ko="[기본소득당] 2024 서울퀴어퍼레이드 부채">
+        <img src="assets/placeholders/placeholder-07.svg" alt="Seoul Queer Parade fan" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="[Basic Income Party] 2024 Seoul Queer Parade — fan" data-i18n-ko="[기본소득당] 2024 서울퀴어퍼레이드 부채">[Basic Income Party] 2024 Seoul Queer Parade — fan</p>
+      <div class="tag-box">
+        <span class="tag">#graphic</span>
+      </div>
+    </article>
 
+    <article class="item" data-tags="graphic motion">
+      <button class="item-media" data-full="assets/placeholders/placeholder-08.svg" data-caption-en="[Basic Income Party] 2024 Seoul Queer Parade — booth poster" data-caption-ko="[기본소득당] 2024 서울퀴어퍼레이드 부스 포스터">
+        <img src="assets/placeholders/placeholder-08.svg" alt="Seoul Queer Parade booth poster" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="[Basic Income Party] 2024 Seoul Queer Parade — booth poster" data-i18n-ko="[기본소득당] 2024 서울퀴어퍼레이드 부스 포스터">[Basic Income Party] 2024 Seoul Queer Parade — booth poster</p>
+      <div class="tag-box">
+        <span class="tag">#graphic</span>
+        <span class="tag">#motion</span>
+      </div>
+    </article>
 
-    <div class="container"> 
+    <article class="item" data-tags="graphic motion">
+      <button class="item-media" data-full="assets/placeholders/placeholder-09.svg" data-caption-en="[Basic Income Party] 2024 Seoul Queer Parade — poster" data-caption-ko="[기본소득당] 2024 서울퀴어퍼레이드 포스터">
+        <img src="assets/placeholders/placeholder-09.svg" alt="Seoul Queer Parade poster" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="[Basic Income Party] 2024 Seoul Queer Parade — poster" data-i18n-ko="[기본소득당] 2024 서울퀴어퍼레이드 포스터">[Basic Income Party] 2024 Seoul Queer Parade — poster</p>
+      <div class="tag-box">
+        <span class="tag">#graphic</span>
+      </div>
+    </article>
 
+    <article class="item" data-tags="web">
+      <button class="item-media" data-full="assets/placeholders/placeholder-10.svg" data-caption-en="[New Order] place archiving" data-caption-ko="[새로운 질서] 장소 아카이빙">
+        <img src="assets/placeholders/placeholder-10.svg" alt="New Order place archiving" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="[New Order] place archiving" data-i18n-ko="[새로운 질서] 장소 아카이빙">[New Order] place archiving</p>
+      <div class="tag-box">
+        <span class="tag">#web</span>
+      </div>
+    </article>
 
-        <div class="item">
-            <a href="p1.html"><img src="phase shifter.png" loading="lazy"></a>
-            <p class="title-kor">〈수동위상변환장치〉</p>
-            <p class="title-eng active">〈Manual Phase Shifter〉</p>
-            <div class="tag-box">
-                <div class="tag"><p>#interaction</p></div>
-                <div class="tag"><p>#installation</p></div>
-                <div class="tag"><p>#graphic</p></div>
-            </div>
-        </div> 
+    <article class="item" data-tags="graphic motion">
+      <button class="item-media" data-full="assets/placeholders/placeholder-11.svg" data-caption-en="Foundation design" data-caption-ko="기초디자인">
+        <img src="assets/placeholders/placeholder-11.svg" alt="Foundation design" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="Foundation design" data-i18n-ko="기초디자인">Foundation design</p>
+      <div class="tag-box">
+        <span class="tag">#graphic</span>
+        <span class="tag">#motion</span>
+      </div>
+    </article>
 
+    <article class="item" data-tags="graphic motion">
+      <button class="item-media" data-full="assets/placeholders/placeholder-12.svg" data-caption-en="Ornaments" data-caption-ko="오너먼츠">
+        <img src="assets/placeholders/placeholder-12.svg" alt="Ornaments" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="Ornaments" data-i18n-ko="오너먼츠">Ornaments</p>
+      <div class="tag-box">
+        <span class="tag">#graphic</span>
+        <span class="tag">#motion</span>
+      </div>
+    </article>
 
-        <div class="item">
-            <a href="p1.html"><img src="support.png" loading="lazy"></a>
-            <p class="title-kor">[기본소득당]<br>오키도키 서포터즈!</p>
-            <p class="title-eng active">[Basic income party]<br>OKDK Suppoerters</p>
-            <div class="tag-box">
-                <div class="tag"><p>#graphic</p></div>
-                <div class="tag"><p>#identity</p></div>
-            </div>
-        </div> 
+    <article class="item" data-tags="editorial photography">
+      <button class="item-media" data-full="assets/placeholders/placeholder-13.svg" data-caption-en="Lookbook" data-caption-ko="룩북">
+        <img src="assets/placeholders/placeholder-13.svg" alt="Lookbook" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="Lookbook" data-i18n-ko="룩북">Lookbook</p>
+      <div class="tag-box">
+        <span class="tag">#editorial</span>
+        <span class="tag">#photography</span>
+      </div>
+    </article>
 
+    <article class="item" data-tags="photography">
+      <button class="item-media" data-full="assets/placeholders/placeholder-14.svg" data-caption-en="Lookbook — detail" data-caption-ko="룩북 — 상세">
+        <img src="assets/placeholders/placeholder-14.svg" alt="Lookbook detail" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="Lookbook — detail" data-i18n-ko="룩북 — 상세">Lookbook — detail</p>
+      <div class="tag-box">
+        <span class="tag">#photography</span>
+      </div>
+    </article>
 
-       <div class="item">
-            <a href="p1.html"><img src="ru_3.png" loading="lazy"></a>   
-            <p class="title-kor">개혁연합 아이덴티티</p>
-            <p class="title-eng active">Reform Union identity</p>
-            <div class="tag-box">
-                <div class="tag"><p>#identity</p></div>
-                <div class="tag"><p>#motion</p></div>
-            </div>
-        </div> 
+    <article class="item" data-tags="photography">
+      <button class="item-media" data-full="assets/placeholders/placeholder-15.svg" data-caption-en="Lookbook — detail" data-caption-ko="룩북 — 상세">
+        <img src="assets/placeholders/placeholder-15.svg" alt="Lookbook detail" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="Lookbook — detail" data-i18n-ko="룩북 — 상세">Lookbook — detail</p>
+      <div class="tag-box">
+        <span class="tag">#photography</span>
+      </div>
+    </article>
 
+    <article class="item" data-tags="photography">
+      <button class="item-media" data-full="assets/placeholders/placeholder-16.svg" data-caption-en="Lookbook — detail" data-caption-ko="룩북 — 상세">
+        <img src="assets/placeholders/placeholder-16.svg" alt="Lookbook detail" loading="lazy">
+      </button>
+      <p class="item-title" data-i18n-en="Lookbook — detail" data-i18n-ko="룩북 — 상세">Lookbook — detail</p>
+      <div class="tag-box">
+        <span class="tag">#photography</span>
+      </div>
+    </article>
 
-        <div class="item">
-            <a href="p1.html"><img src="dp3.jpg" loading="lazy"></a>
-            <p class="title-kor">[기본소득당]<br>대파 퍼포먼스 피켓</p>
-            <p class="title-eng active">[Basic Income Party]<br>green onion performance picket</p>
-            <div class="tag-box">
-                <div class="tag"><p>#graphic</p></div>
-            </div>            
-        </div>     
+  </section>
 
+  <section id="about" class="about">
+    <h2 data-i18n-en="About" data-i18n-ko="소개">About</h2>
+    <p data-i18n-en="Hansem Kim is a visual designer based in Seoul, working across graphic design, editorial, motion, identity, web and interactive installation. Recent work spans campaign graphics for the Basic Income Party, editorial design for Megastudy Russel, and place-archiving web experiments for New Order."
+       data-i18n-ko="김한샘은 서울을 기반으로 활동하는 비주얼 디자이너로, 그래픽 디자인, 에디토리얼, 모션, 아이덴티티, 웹, 인터랙티브 설치를 오가며 작업합니다. 최근에는 기본소득당의 캠페인 그래픽, 메가스터디 러셀의 에디토리얼 디자인, 새로운 질서의 장소 아카이빙 웹 실험 등을 진행했습니다.">
+      Hansem Kim is a visual designer based in Seoul, working across graphic design, editorial, motion, identity, web and interactive installation. Recent work spans campaign graphics for the Basic Income Party, editorial design for Megastudy Russel, and place-archiving web experiments for New Order.
+    </p>
+    <a class="contact-link" href="mailto:1433gmlcks@gmail.com">1433gmlcks@gmail.com</a>
+  </section>
 
-        <div class="item">
-            <a href="p1.html"><img src="w3.png" loading="lazy"></a>   
-            <p class="title-kor">룩북</p>
-            <p class="title-eng active">small lookbook of my...</p>
-            <div class="tag-box">
-                <div class="tag"><p>#editorial</p></div>
-                <div class="tag"><p>#photography</p></div>
-            </div>
-        </div> 
+</main>
 
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Hansem Kim</p>
+</footer>
 
-        <div class="item">
-            <a href="p1.html"><img src="gd3.png" loading="lazy"></a>
-            <p class="title-kor">메가스터디 러셀 - 고도연<br>〈문학의도〉</p>
-            <p class="title-eng active">Megastudy Russel - Doyun Ko<br>〈the path of literature〉</p>
-            <div class="tag-box">
-                <div class="tag"><p>#editorial</p></div>
-            </div>   
-        </div> 
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <div class="lightbox-content">
+    <img id="lightboxImg" src="" alt="">
+    <p id="lightboxCaption"></p>
+  </div>
+</div>
 
-
-        <div class="item">
-            <a href="p1.html"><img src="fan.png" loading="lazy"></a>
-                <p class="title-kor">[기본소득당]<br>2024 서울퀴어퍼레이드 부채</p>
-                <p class="title-eng active">[Basic Income Party]<br> 2024 Seoul Queer Parade - fan</p>
-            <div class="tag-box">
-                <div class="tag"><p>#graphic</p></div>
-            </div>
-        </div> 
-
-
-        <div class="item">
-            <a href="p1.html"><img src="qp comp.gif" loading="lazy"></a>
-            <p class="title-kor">[기본소득당]<br>2024 서울퀴어퍼레이드 부스 포스터</p>
-            <p class="title-eng active">[Basic Income Party]<br> 2024 Seoul Queer Parade - poster</p>
-            <div class="tag-box">
-                <div class="tag"><p>#graphic</p></div>
-                <div class="tag"><p>#motion</p></div>
-            </div>  
-        </div> 
-
-
-       <div class="item">
-            <a href="p1.html"><img src="sedaff.gif" loading="lazy"></a>   
-            <p class="title-kor">제6회 서울무용영화제<br>모션 포스터</p>
-            <p class="title-eng active">6th Seoul Dance Film Festival <br>motion Poster</p>
-            <div class="tag-box">
-                <div class="tag"><p>#graphic</p></div>
-                <div class="tag"><p>#motion</p></div>
-            </div>
-        </div> 
-
-
-
-
-
-       <div class="item">
-            <a href="p1.html"><img src="neworder.png" loading="lazy"></a>   
-            <p class="title-kor">[새로운 질서]<br>장소 아카이빙</p>
-            <p class="title-eng active">[New Order]<br>place archiving</p>
-            <div class="tag-box">
-                <div class="tag"><p>#web</p></div>
-            </div>
-        </div> 
-
-       <div class="item">
-            <a href="p1.html"><img src="homeless.png" loading="lazy"></a>   
-            <p class="title-kor"></p>
-            <p class="title-eng active">Homeless 3rd concert - Chrome</p>
-            <div class="tag-box">
-                <div class="tag"><p>#graphic</p></div>
-                <div class="tag"><p>#motion</p></div>
-            </div>
-        </div> 
-
-
-       <div class="item">
-            <a href="p1.html"><img src="foundation.gif" loading="lazy"></a>   
-            <p class="title-kor">기초디자인</p>
-            <p class="title-eng active">foundation design</p>
-            <div class="tag-box">
-                <div class="tag"><p>#graphic</p></div>
-                <div class="tag"><p>#motion</p></div>
-            </div>
-        </div> 
-
-
-       <div class="item">
-            <a href="p1.html"><img src="ornaments.gif" loading="lazy"></a>   
-            <p class="title-kor">오너먼츠</p>
-            <p class="title-eng active">ornaments</p>
-            <div class="tag-box">
-                <div class="tag"><p>#graphic</p></div>
-                <div class="tag"><p>#motion</p></div>
-            </div>
-        </div> 
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>  <!-- 컨테이너 끝 -->
-
-
-
-    
-    <div class="footer1">
-        <p>ⓒ 2024 Hansem Kim</p>
-    </div>
- 
+<script src="script.js"></script>
 </body>
 </html>
