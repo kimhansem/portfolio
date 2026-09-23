@@ -1,9 +1,18 @@
 // Site content lives here. To add a work:
-// 1. Make a folder assets/works/<id>/ and put its photos in it.
+// 1. Make a folder assets/works/<id>/ and put its photos in it. Whichever
+//    file is named "01" (any extension — 01.jpg, 01.png, 01.gif, ...) is
+//    used as the grid thumbnail; the rest show up on its detail page.
 // 2. Append one object to PROJECTS below, listing those filenames in
-//    `images` (the first one is used as the grid thumbnail).
+//    `images`.
 // Image paths are always assets/works/<id>/<filename> — folder name + file
 // name is all that's needed, nothing else references the file system.
+
+function thumbnailFilename(images) {
+  var named01 = images.filter(function (name) {
+    return /^01\.[^.]+$/.test(name);
+  })[0];
+  return named01 || images[0];
+}
 
 var PROJECTS = [
   {
