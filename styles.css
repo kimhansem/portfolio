@@ -252,7 +252,8 @@ a {
   gap: 16px;
 }
 
-.detail-gallery img {
+.detail-gallery img,
+.detail-gallery video {
   width: 100%;
   height: auto;
   display: block;
