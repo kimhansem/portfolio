@@ -45,37 +45,21 @@
   // Lightbox
   var lightbox = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightboxImg");
-  var lightboxVideo = document.getElementById("lightboxVideo");
   var lightboxCaption = document.getElementById("lightboxCaption");
   var lightboxClose = document.getElementById("lightboxClose");
 
   function openLightbox(trigger) {
-    var full = trigger.getAttribute("data-full");
-    var isVideo = trigger.getAttribute("data-video") === "true";
     var caption = isKorean
       ? trigger.getAttribute("data-caption-ko")
       : trigger.getAttribute("data-caption-en");
 
-    if (isVideo) {
-      lightboxVideo.src = full;
-      lightboxVideo.hidden = false;
-      lightboxImg.hidden = true;
-      lightboxVideo.play();
-    } else {
-      lightboxImg.src = full;
-      lightboxImg.hidden = false;
-      lightboxVideo.hidden = true;
-    }
-
+    lightboxImg.src = trigger.getAttribute("data-full");
     lightboxCaption.textContent = caption || "";
     lightbox.hidden = false;
   }
 
   function closeLightbox() {
     lightbox.hidden = true;
-    lightboxVideo.pause();
-    lightboxVideo.removeAttribute("src");
-    lightboxVideo.load();
     lightboxImg.removeAttribute("src");
   }
 
@@ -96,23 +80,4 @@
       closeLightbox();
     }
   });
-
-  // Autoplay grid videos muted, pause when out of view
-  var gridVideos = document.querySelectorAll(".item-media video");
-  if ("IntersectionObserver" in window && gridVideos.length) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        var video = entry.target;
-        if (entry.isIntersecting) {
-          video.play().catch(function () {});
-        } else {
-          video.pause();
-        }
-      });
-    }, { threshold: 0.25 });
-
-    gridVideos.forEach(function (video) {
-      observer.observe(video);
-    });
-  }
 })();
