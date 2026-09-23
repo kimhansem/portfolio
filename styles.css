@@ -100,6 +100,7 @@ button {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-left: auto;
   white-space: nowrap;
 }
 
@@ -170,8 +171,7 @@ button {
   position: relative;
 }
 
-.item-media img,
-.item-media video {
+.item-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -179,8 +179,7 @@ button {
   transition: transform 0.3s ease;
 }
 
-.item-media:hover img,
-.item-media:hover video {
+.item-media:hover img {
   transform: scale(1.04);
 }
 
@@ -254,59 +253,68 @@ button {
   padding: 40px 24px;
 }
 
-/* Lightbox */
+/* Work detail page */
 
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.92);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  padding: 40px;
+.detail-top {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px 0;
 }
 
-.lightbox[hidden] {
-  display: none;
+.back-link {
+  font-size: 14px;
+  color: var(--muted);
 }
 
-.lightbox-content {
-  max-width: 100%;
-  max-height: 100%;
+.back-link:hover {
+  color: var(--fg);
+}
+
+.detail {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 24px 64px;
+}
+
+.detail-title {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 16px;
+  color: var(--fg);
+}
+
+.detail .tag-box {
+  padding: 0 0 24px;
+}
+
+.detail-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--fg);
+  max-width: 640px;
+  margin: 0 0 32px;
+}
+
+.detail-gallery {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
-.lightbox-content img,
-.lightbox-content video {
-  max-width: 100%;
-  max-height: 80vh;
-  object-fit: contain;
+.detail-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #1a1a1a;
 }
 
-.lightbox-content p {
-  color: var(--fg);
-  font-size: 14px;
-  text-align: center;
-  margin: 0;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 24px;
-  background: transparent;
-  border: none;
-  color: var(--fg);
-  font-size: 32px;
-  line-height: 1;
-}
-
-.lightbox-close:hover {
-  color: var(--accent);
+.not-found {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  color: var(--muted);
+  font-size: 16px;
 }
 
 /* Responsive */
@@ -332,7 +340,6 @@ button {
 
   .header-actions {
     order: 2;
-    margin-left: auto;
   }
 
   .filter-nav {

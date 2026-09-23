@@ -33,14 +33,12 @@
     article.className = "item";
     article.setAttribute("data-tags", project.tags.join(" "));
 
-    var media = document.createElement("button");
+    var media = document.createElement("a");
     media.className = "item-media";
-    media.setAttribute("data-full", project.image);
-    media.setAttribute("data-caption-en", project.title.en);
-    media.setAttribute("data-caption-ko", project.title.ko);
+    media.href = "work.html?id=" + encodeURIComponent(project.id);
 
     var img = document.createElement("img");
-    img.src = project.image;
+    img.src = project.images[0];
     img.alt = project.title.en;
     img.loading = "lazy";
     media.appendChild(img);
@@ -103,44 +101,5 @@
   langToggle.addEventListener("click", function () {
     isKorean = !isKorean;
     applyLanguage();
-  });
-
-  // Lightbox
-  var lightbox = document.getElementById("lightbox");
-  var lightboxImg = document.getElementById("lightboxImg");
-  var lightboxCaption = document.getElementById("lightboxCaption");
-  var lightboxClose = document.getElementById("lightboxClose");
-
-  function openLightbox(trigger) {
-    var caption = isKorean
-      ? trigger.getAttribute("data-caption-ko")
-      : trigger.getAttribute("data-caption-en");
-
-    lightboxImg.src = trigger.getAttribute("data-full");
-    lightboxCaption.textContent = caption || "";
-    lightbox.hidden = false;
-  }
-
-  function closeLightbox() {
-    lightbox.hidden = true;
-    lightboxImg.removeAttribute("src");
-  }
-
-  document.querySelectorAll(".item-media").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      openLightbox(btn);
-    });
-  });
-
-  lightboxClose.addEventListener("click", closeLightbox);
-  lightbox.addEventListener("click", function (e) {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && !lightbox.hidden) {
-      closeLightbox();
-    }
   });
 })();
