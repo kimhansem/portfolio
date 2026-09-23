@@ -1,6 +1,13 @@
 (function () {
   "use strict";
 
+  var VIDEO_EXTENSIONS = ["mp4", "webm"];
+
+  function isVideoFile(filename) {
+    var ext = filename.split(".").pop().toLowerCase();
+    return VIDEO_EXTENSIONS.indexOf(ext) !== -1;
+  }
+
   document.getElementById("year").textContent = new Date().getFullYear();
 
   var id = new URLSearchParams(location.search).get("id");
@@ -28,11 +35,24 @@
   var gallery = document.createElement("div");
   gallery.className = "detail-gallery";
   project.images.forEach(function (filename) {
-    var img = document.createElement("img");
-    img.src = "assets/works/" + project.id + "/" + filename;
-    img.alt = project.title;
-    img.loading = "lazy";
-    gallery.appendChild(img);
+    var src = "assets/works/" + project.id + "/" + filename;
+    var media;
+
+    if (isVideoFile(filename)) {
+      media = document.createElement("video");
+      media.src = src;
+      media.muted = true;
+      media.loop = true;
+      media.autoplay = true;
+      media.playsInline = true;
+    } else {
+      media = document.createElement("img");
+      media.src = src;
+      media.alt = project.title;
+      media.loading = "lazy";
+    }
+
+    gallery.appendChild(media);
   });
 
   container.appendChild(title);

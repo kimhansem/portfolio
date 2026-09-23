@@ -14,7 +14,7 @@
     media.href = "work.html?id=" + encodeURIComponent(project.id);
 
     var img = document.createElement("img");
-    img.src = "assets/works/" + project.id + "/" + thumbnailFilename(project.images);
+    img.src = "assets/works/" + project.id + "/" + project.thumbnail;
     img.alt = project.title;
     img.loading = "lazy";
     media.appendChild(img);
