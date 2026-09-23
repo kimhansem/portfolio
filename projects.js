@@ -1,7 +1,8 @@
 // Site content lives here. To add a work:
 // 1. Make a folder assets/works/<id>/ and put its photos in it. Whichever
 //    file is named "01" (any extension — 01.jpg, 01.png, 01.gif, ...) is
-//    used as the grid thumbnail; the rest show up on its detail page.
+//    used as the grid thumbnail. The rest show up on its detail page in
+//    the order listed in `images` below.
 // 2. Append one object to PROJECTS below, listing those filenames in
 //    `images`.
 // Image paths are always assets/works/<id>/<filename> — folder name + file
