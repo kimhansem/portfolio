@@ -1,141 +1,105 @@
-// Site content lives here. To add a work, append one object to PROJECTS —
-// the filter nav, the grid, and each work's detail page are all generated
-// from this data. `id` must be unique: it's the work.html?id=... slug.
-
-var CATEGORIES = [
-  { id: "graphic", en: "Graphic", ko: "그래픽" },
-  { id: "editorial", en: "Editorial", ko: "에디토리얼" },
-  { id: "motion", en: "Motion", ko: "모션" },
-  { id: "identity", en: "Identity", ko: "아이덴티티" },
-  { id: "web", en: "Web", ko: "웹" },
-  { id: "interaction", en: "Interaction", ko: "인터랙션" },
-  { id: "installation", en: "Installation", ko: "설치" },
-  { id: "photography", en: "Photography", ko: "포토그래피" }
-];
-
-var PLACEHOLDER_DESC = {
-  en: "Detail description for this project goes here — replace this placeholder with your own write-up (concept, role, tools, year).",
-  ko: "이 프로젝트에 대한 상세 설명이 들어갈 자리입니다. 실제 내용(컨셉, 역할, 사용 도구, 연도 등)으로 교체하세요."
-};
-
-function placeholderImages() {
-  var args = Array.prototype.slice.call(arguments);
-  return args.map(function (n) {
-    return "assets/placeholders/placeholder-" + String(n).padStart(2, "0") + ".svg";
-  });
-}
+// Site content lives here. To add a work:
+// 1. Make a folder assets/works/<id>/ and put its photos in it.
+// 2. Append one object to PROJECTS below, listing those filenames in
+//    `images` (the first one is used as the grid thumbnail).
+// Image paths are always assets/works/<id>/<filename> — folder name + file
+// name is all that's needed, nothing else references the file system.
 
 var PROJECTS = [
   {
     id: "manual-phase-shifter",
-    images: placeholderImages(1, 5, 10),
-    title: { en: "Manual Phase Shifter", ko: "수동위상변환장치" },
-    description: PLACEHOLDER_DESC,
-    tags: ["interaction", "installation", "graphic"]
+    title: "수동위상변환장치",
+    description: "“수동위상변환장치”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "okdk-supporters",
-    images: placeholderImages(2, 6, 11),
-    title: { en: "[Basic Income Party] OKDK Supporters", ko: "[기본소득당] 오키도키 서포터즈!" },
-    description: PLACEHOLDER_DESC,
-    tags: ["graphic", "identity"]
+    title: "[기본소득당] 오키도키 서포터즈!",
+    description: "“오키도키 서포터즈”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "green-onion-picket",
-    images: placeholderImages(3, 7, 12),
-    title: { en: "[Basic Income Party] Green Onion Performance Picket", ko: "[기본소득당] 대파 퍼포먼스 피켓" },
-    description: PLACEHOLDER_DESC,
-    tags: ["graphic"]
+    title: "[기본소득당] 대파 퍼포먼스 피켓",
+    description: "“대파 퍼포먼스 피켓”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "path-of-literature",
-    images: placeholderImages(4, 8, 13),
-    title: { en: "Megastudy Russel — Doyun Ko, ⟨The Path of Literature⟩", ko: "메가스터디 러셀 — 고도연, 〈문학의도〉" },
-    description: PLACEHOLDER_DESC,
-    tags: ["editorial"]
+    title: "메가스터디 러셀 — 고도연, 〈문학의도〉",
+    description: "“문학의도”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "path-of-literature-detail-1",
-    images: placeholderImages(5, 9, 14),
-    title: { en: "⟨The Path of Literature⟩ — detail", ko: "〈문학의도〉 — 상세" },
-    description: PLACEHOLDER_DESC,
-    tags: ["editorial"]
+    title: "〈문학의도〉 — 상세",
+    description: "“문학의도”의 상세 이미지 페이지입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "path-of-literature-detail-2",
-    images: placeholderImages(6, 10, 15),
-    title: { en: "⟨The Path of Literature⟩ — detail", ko: "〈문학의도〉 — 상세" },
-    description: PLACEHOLDER_DESC,
-    tags: ["editorial"]
+    title: "〈문학의도〉 — 상세",
+    description: "“문학의도”의 또 다른 상세 이미지 페이지입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "queer-parade-fan",
-    images: placeholderImages(7, 11, 16),
-    title: { en: "[Basic Income Party] 2024 Seoul Queer Parade — fan", ko: "[기본소득당] 2024 서울퀴어퍼레이드 부채" },
-    description: PLACEHOLDER_DESC,
-    tags: ["graphic"]
+    title: "[기본소득당] 2024 서울퀴어퍼레이드 부채",
+    description: "“서울퀴어퍼레이드 부채”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "queer-parade-booth-poster",
-    images: placeholderImages(8, 12, 1),
-    title: { en: "[Basic Income Party] 2024 Seoul Queer Parade — booth poster", ko: "[기본소득당] 2024 서울퀴어퍼레이드 부스 포스터" },
-    description: PLACEHOLDER_DESC,
-    tags: ["graphic", "motion"]
+    title: "[기본소득당] 2024 서울퀴어퍼레이드 부스 포스터",
+    description: "“서울퀴어퍼레이드 부스 포스터”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "queer-parade-poster",
-    images: placeholderImages(9, 13, 2),
-    title: { en: "[Basic Income Party] 2024 Seoul Queer Parade — poster", ko: "[기본소득당] 2024 서울퀴어퍼레이드 포스터" },
-    description: PLACEHOLDER_DESC,
-    tags: ["graphic"]
+    title: "[기본소득당] 2024 서울퀴어퍼레이드 포스터",
+    description: "“서울퀴어퍼레이드 포스터”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "new-order-archiving",
-    images: placeholderImages(10, 14, 3),
-    title: { en: "[New Order] place archiving", ko: "[새로운 질서] 장소 아카이빙" },
-    description: PLACEHOLDER_DESC,
-    tags: ["web"]
+    title: "[새로운 질서] 장소 아카이빙",
+    description: "“새로운 질서 장소 아카이빙”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "foundation-design",
-    images: placeholderImages(11, 15, 4),
-    title: { en: "Foundation design", ko: "기초디자인" },
-    description: PLACEHOLDER_DESC,
-    tags: ["graphic", "motion"]
+    title: "기초디자인",
+    description: "“기초디자인”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "ornaments",
-    images: placeholderImages(12, 16, 5),
-    title: { en: "Ornaments", ko: "오너먼츠" },
-    description: PLACEHOLDER_DESC,
-    tags: ["graphic", "motion"]
+    title: "오너먼츠",
+    description: "“오너먼츠”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "lookbook",
-    images: placeholderImages(13, 1, 6),
-    title: { en: "Lookbook", ko: "룩북" },
-    description: PLACEHOLDER_DESC,
-    tags: ["editorial", "photography"]
+    title: "룩북",
+    description: "“룩북”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "lookbook-detail-1",
-    images: placeholderImages(14, 2, 7),
-    title: { en: "Lookbook — detail", ko: "룩북 — 상세" },
-    description: PLACEHOLDER_DESC,
-    tags: ["photography"]
+    title: "룩북 — 상세",
+    description: "“룩북”의 상세 이미지 페이지입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "lookbook-detail-2",
-    images: placeholderImages(15, 3, 8),
-    title: { en: "Lookbook — detail", ko: "룩북 — 상세" },
-    description: PLACEHOLDER_DESC,
-    tags: ["photography"]
+    title: "룩북 — 상세",
+    description: "“룩북”의 또 다른 상세 이미지 페이지입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   },
   {
     id: "lookbook-detail-3",
-    images: placeholderImages(16, 4, 9),
-    title: { en: "Lookbook — detail", ko: "룩북 — 상세" },
-    description: PLACEHOLDER_DESC,
-    tags: ["photography"]
+    title: "룩북 — 상세",
+    description: "“룩북”의 세 번째 상세 이미지 페이지입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
+    images: ["01.svg", "02.svg", "03.svg"]
   }
 ];
