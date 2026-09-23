@@ -15,17 +15,7 @@
 <header class="site-header">
   <a class="logo" href="#top" data-i18n-en="HANSEM KIM" data-i18n-ko="김한샘">HANSEM KIM</a>
 
-  <nav class="filter-nav">
-    <button class="filter-btn active" data-filter="all" data-i18n-en="All" data-i18n-ko="전체">All</button>
-    <button class="filter-btn" data-filter="graphic" data-i18n-en="Graphic" data-i18n-ko="그래픽">Graphic</button>
-    <button class="filter-btn" data-filter="editorial" data-i18n-en="Editorial" data-i18n-ko="에디토리얼">Editorial</button>
-    <button class="filter-btn" data-filter="motion" data-i18n-en="Motion" data-i18n-ko="모션">Motion</button>
-    <button class="filter-btn" data-filter="identity" data-i18n-en="Identity" data-i18n-ko="아이덴티티">Identity</button>
-    <button class="filter-btn" data-filter="web" data-i18n-en="Web" data-i18n-ko="웹">Web</button>
-    <button class="filter-btn" data-filter="interaction" data-i18n-en="Interaction" data-i18n-ko="인터랙션">Interaction</button>
-    <button class="filter-btn" data-filter="installation" data-i18n-en="Installation" data-i18n-ko="설치">Installation</button>
-    <button class="filter-btn" data-filter="photography" data-i18n-en="Photography" data-i18n-ko="포토그래피">Photography</button>
-  </nav>
+  <nav class="filter-nav" id="filterNav"></nav>
 
   <div class="header-actions">
     <a class="nav-link" href="#about" data-i18n-en="About" data-i18n-ko="소개">About</a>
@@ -42,176 +32,7 @@
     </h1>
   </section>
 
-  <section class="grid" id="workGrid">
-
-    <article class="item" data-tags="interaction installation graphic">
-      <button class="item-media" data-full="assets/placeholders/placeholder-01.svg" data-caption-en="Manual Phase Shifter" data-caption-ko="수동위상변환장치">
-        <img src="assets/placeholders/placeholder-01.svg" alt="Manual Phase Shifter" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="Manual Phase Shifter" data-i18n-ko="수동위상변환장치">Manual Phase Shifter</p>
-      <div class="tag-box">
-        <span class="tag">#interaction</span>
-        <span class="tag">#installation</span>
-        <span class="tag">#graphic</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="graphic identity">
-      <button class="item-media" data-full="assets/placeholders/placeholder-02.svg" data-caption-en="[Basic Income Party] OKDK Supporters" data-caption-ko="[기본소득당] 오키도키 서포터즈!">
-        <img src="assets/placeholders/placeholder-02.svg" alt="OKDK Supporters" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="[Basic Income Party] OKDK Supporters" data-i18n-ko="[기본소득당] 오키도키 서포터즈!">[Basic Income Party] OKDK Supporters</p>
-      <div class="tag-box">
-        <span class="tag">#graphic</span>
-        <span class="tag">#identity</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="graphic">
-      <button class="item-media" data-full="assets/placeholders/placeholder-03.svg" data-caption-en="[Basic Income Party] Green Onion Performance Picket" data-caption-ko="[기본소득당] 대파 퍼포먼스 피켓">
-        <img src="assets/placeholders/placeholder-03.svg" alt="Green Onion Performance Picket" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="[Basic Income Party] Green Onion Performance Picket" data-i18n-ko="[기본소득당] 대파 퍼포먼스 피켓">[Basic Income Party] Green Onion Performance Picket</p>
-      <div class="tag-box">
-        <span class="tag">#graphic</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="editorial">
-      <button class="item-media" data-full="assets/placeholders/placeholder-04.svg" data-caption-en="Megastudy Russel — Doyun Ko, ⟨The Path of Literature⟩" data-caption-ko="메가스터디 러셀 — 고도연, 〈문학의도〉">
-        <img src="assets/placeholders/placeholder-04.svg" alt="The Path of Literature" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="Megastudy Russel — Doyun Ko, ⟨The Path of Literature⟩" data-i18n-ko="메가스터디 러셀 — 고도연, 〈문학의도〉">Megastudy Russel — Doyun Ko, ⟨The Path of Literature⟩</p>
-      <div class="tag-box">
-        <span class="tag">#editorial</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="editorial">
-      <button class="item-media" data-full="assets/placeholders/placeholder-05.svg" data-caption-en="Megastudy Russel — Doyun Ko, ⟨The Path of Literature⟩ (detail)" data-caption-ko="메가스터디 러셀 — 고도연, 〈문학의도〉 (상세)">
-        <img src="assets/placeholders/placeholder-05.svg" alt="The Path of Literature detail" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="⟨The Path of Literature⟩ — detail" data-i18n-ko="〈문학의도〉 — 상세">⟨The Path of Literature⟩ — detail</p>
-      <div class="tag-box">
-        <span class="tag">#editorial</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="editorial">
-      <button class="item-media" data-full="assets/placeholders/placeholder-06.svg" data-caption-en="Megastudy Russel — Doyun Ko, ⟨The Path of Literature⟩ (detail)" data-caption-ko="메가스터디 러셀 — 고도연, 〈문학의도〉 (상세)">
-        <img src="assets/placeholders/placeholder-06.svg" alt="The Path of Literature detail" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="⟨The Path of Literature⟩ — detail" data-i18n-ko="〈문학의도〉 — 상세">⟨The Path of Literature⟩ — detail</p>
-      <div class="tag-box">
-        <span class="tag">#editorial</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="graphic">
-      <button class="item-media" data-full="assets/placeholders/placeholder-07.svg" data-caption-en="[Basic Income Party] 2024 Seoul Queer Parade — fan" data-caption-ko="[기본소득당] 2024 서울퀴어퍼레이드 부채">
-        <img src="assets/placeholders/placeholder-07.svg" alt="Seoul Queer Parade fan" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="[Basic Income Party] 2024 Seoul Queer Parade — fan" data-i18n-ko="[기본소득당] 2024 서울퀴어퍼레이드 부채">[Basic Income Party] 2024 Seoul Queer Parade — fan</p>
-      <div class="tag-box">
-        <span class="tag">#graphic</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="graphic motion">
-      <button class="item-media" data-full="assets/placeholders/placeholder-08.svg" data-caption-en="[Basic Income Party] 2024 Seoul Queer Parade — booth poster" data-caption-ko="[기본소득당] 2024 서울퀴어퍼레이드 부스 포스터">
-        <img src="assets/placeholders/placeholder-08.svg" alt="Seoul Queer Parade booth poster" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="[Basic Income Party] 2024 Seoul Queer Parade — booth poster" data-i18n-ko="[기본소득당] 2024 서울퀴어퍼레이드 부스 포스터">[Basic Income Party] 2024 Seoul Queer Parade — booth poster</p>
-      <div class="tag-box">
-        <span class="tag">#graphic</span>
-        <span class="tag">#motion</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="graphic motion">
-      <button class="item-media" data-full="assets/placeholders/placeholder-09.svg" data-caption-en="[Basic Income Party] 2024 Seoul Queer Parade — poster" data-caption-ko="[기본소득당] 2024 서울퀴어퍼레이드 포스터">
-        <img src="assets/placeholders/placeholder-09.svg" alt="Seoul Queer Parade poster" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="[Basic Income Party] 2024 Seoul Queer Parade — poster" data-i18n-ko="[기본소득당] 2024 서울퀴어퍼레이드 포스터">[Basic Income Party] 2024 Seoul Queer Parade — poster</p>
-      <div class="tag-box">
-        <span class="tag">#graphic</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="web">
-      <button class="item-media" data-full="assets/placeholders/placeholder-10.svg" data-caption-en="[New Order] place archiving" data-caption-ko="[새로운 질서] 장소 아카이빙">
-        <img src="assets/placeholders/placeholder-10.svg" alt="New Order place archiving" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="[New Order] place archiving" data-i18n-ko="[새로운 질서] 장소 아카이빙">[New Order] place archiving</p>
-      <div class="tag-box">
-        <span class="tag">#web</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="graphic motion">
-      <button class="item-media" data-full="assets/placeholders/placeholder-11.svg" data-caption-en="Foundation design" data-caption-ko="기초디자인">
-        <img src="assets/placeholders/placeholder-11.svg" alt="Foundation design" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="Foundation design" data-i18n-ko="기초디자인">Foundation design</p>
-      <div class="tag-box">
-        <span class="tag">#graphic</span>
-        <span class="tag">#motion</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="graphic motion">
-      <button class="item-media" data-full="assets/placeholders/placeholder-12.svg" data-caption-en="Ornaments" data-caption-ko="오너먼츠">
-        <img src="assets/placeholders/placeholder-12.svg" alt="Ornaments" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="Ornaments" data-i18n-ko="오너먼츠">Ornaments</p>
-      <div class="tag-box">
-        <span class="tag">#graphic</span>
-        <span class="tag">#motion</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="editorial photography">
-      <button class="item-media" data-full="assets/placeholders/placeholder-13.svg" data-caption-en="Lookbook" data-caption-ko="룩북">
-        <img src="assets/placeholders/placeholder-13.svg" alt="Lookbook" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="Lookbook" data-i18n-ko="룩북">Lookbook</p>
-      <div class="tag-box">
-        <span class="tag">#editorial</span>
-        <span class="tag">#photography</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="photography">
-      <button class="item-media" data-full="assets/placeholders/placeholder-14.svg" data-caption-en="Lookbook — detail" data-caption-ko="룩북 — 상세">
-        <img src="assets/placeholders/placeholder-14.svg" alt="Lookbook detail" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="Lookbook — detail" data-i18n-ko="룩북 — 상세">Lookbook — detail</p>
-      <div class="tag-box">
-        <span class="tag">#photography</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="photography">
-      <button class="item-media" data-full="assets/placeholders/placeholder-15.svg" data-caption-en="Lookbook — detail" data-caption-ko="룩북 — 상세">
-        <img src="assets/placeholders/placeholder-15.svg" alt="Lookbook detail" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="Lookbook — detail" data-i18n-ko="룩북 — 상세">Lookbook — detail</p>
-      <div class="tag-box">
-        <span class="tag">#photography</span>
-      </div>
-    </article>
-
-    <article class="item" data-tags="photography">
-      <button class="item-media" data-full="assets/placeholders/placeholder-16.svg" data-caption-en="Lookbook — detail" data-caption-ko="룩북 — 상세">
-        <img src="assets/placeholders/placeholder-16.svg" alt="Lookbook detail" loading="lazy">
-      </button>
-      <p class="item-title" data-i18n-en="Lookbook — detail" data-i18n-ko="룩북 — 상세">Lookbook — detail</p>
-      <div class="tag-box">
-        <span class="tag">#photography</span>
-      </div>
-    </article>
-
-  </section>
+  <section class="grid" id="workGrid"></section>
 
   <section id="about" class="about">
     <h2 data-i18n-en="About" data-i18n-ko="소개">About</h2>
@@ -236,6 +57,7 @@
   </div>
 </div>
 
+<script src="projects.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
