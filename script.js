@@ -7,7 +7,7 @@
 
   PROJECTS.forEach(function (project) {
     var article = document.createElement("article");
-    article.className = "item";
+    article.className = "item item-" + project.size;
 
     var media = document.createElement("a");
     media.className = "item-media";
