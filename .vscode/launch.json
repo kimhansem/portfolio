@@ -5,9 +5,9 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "editor-browser",
+            "type": "chrome",
             "request": "launch",
-            "name": "Open index.html",
+            "name": "Open index.html in Chrome",
             "url": "file:///c%3A/Users/hanse/Desktop/Hansem%20Kim/portfolio/portfolio/index.html"
         }
     ]
