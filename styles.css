@@ -61,20 +61,21 @@ a {
 
 .grid {
   --cols: 4;
+  --gap: 4px;
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: var(--gap);
   padding: 24px;
 }
 
 .item {
   display: flex;
   flex-direction: column;
-  flex: 0 0 calc(100% / var(--cols));
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
 }
 
 .item-small {
-  flex-basis: calc(100% / var(--cols) * 3 / 5);
+  flex-basis: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols) * 3 / 5);
 }
 
 .item-media {
