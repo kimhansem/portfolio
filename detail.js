@@ -28,6 +28,14 @@
   title.className = "detail-title";
   title.textContent = project.title;
 
+  var date = document.createElement("p");
+  date.className = "detail-date";
+  date.textContent = project.date;
+
+  var tags = document.createElement("p");
+  tags.className = "detail-tags";
+  tags.textContent = project.tags.map(function (t) { return "#" + t; }).join(" ");
+
   var description = document.createElement("p");
   description.className = "detail-description";
   description.textContent = project.description;
@@ -56,6 +64,8 @@
   });
 
   container.appendChild(title);
+  container.appendChild(date);
+  container.appendChild(tags);
   container.appendChild(description);
   container.appendChild(gallery);
 })();
