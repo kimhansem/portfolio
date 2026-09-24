@@ -12,13 +12,13 @@
 
   var id = new URLSearchParams(location.search).get("id");
   var project = PROJECTS.filter(function (p) { return p.id === id; })[0];
-  var container = document.getElementById("workDetail");
+  var info = document.getElementById("workInfo");
+  var gallery = document.getElementById("workGallery");
 
   if (!project) {
-    container.className = "not-found";
     var msg = document.createElement("p");
     msg.textContent = "작업을 찾을 수 없습니다.";
-    container.appendChild(msg);
+    info.appendChild(msg);
     return;
   }
 
@@ -40,8 +40,6 @@
   description.className = "detail-description";
   description.textContent = project.description;
 
-  var gallery = document.createElement("div");
-  gallery.className = "detail-gallery";
   project.images.forEach(function (filename) {
     var src = "assets/works/" + project.id + "/" + filename;
     var media;
@@ -63,9 +61,8 @@
     gallery.appendChild(media);
   });
 
-  container.appendChild(title);
-  container.appendChild(date);
-  container.appendChild(tags);
-  container.appendChild(description);
-  container.appendChild(gallery);
+  info.appendChild(title);
+  info.appendChild(date);
+  info.appendChild(tags);
+  info.appendChild(description);
 })();
