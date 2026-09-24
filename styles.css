@@ -78,6 +78,10 @@ a {
   flex-basis: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols) * 3 / 5);
 }
 
+.item-big {
+  flex-basis: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols) * 1.4);
+}
+
 .item-media {
   display: block;
   width: 100%;
@@ -269,7 +273,8 @@ a {
   }
 
   .item,
-  .item-small {
+  .item-small,
+  .item-big {
     flex-basis: 100%;
   }
 

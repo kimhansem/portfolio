@@ -4,9 +4,10 @@
 //    - `date`: shown on the detail page, "YYYY-MM".
 //    - `tags`: shown under the grid title and on the detail page. Purely
 //      informational — there's no filtering/sorting by tag.
-//    - `size`: "normal" or "small". Controls how much width the grid
-//      thumbnail takes (small = 3/5 of normal); height always follows the
-//      thumbnail image's own aspect ratio, uncropped.
+//    - `size`: "small", "normal", or "big". Controls how much width the
+//      grid thumbnail takes (small = 3/5 of normal, big = 1.4x normal);
+//      height always follows the thumbnail image's own aspect ratio,
+//      uncropped.
 //    - `thumbnail`: the filename (in that folder) used as the grid
 //      thumbnail. Must be an image or gif — not a video.
 //    - `images`: the filenames shown on its detail page, in order.
@@ -90,7 +91,7 @@ var PROJECTS = [
     description: "“서울퀴어퍼레이드 부스 포스터”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
     date: "20XX-XX",
     tags: ["graphic", "motion"],
-    size: "normal",
+    size: "big",
     thumbnail: "01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg"]
   },
@@ -150,7 +151,7 @@ var PROJECTS = [
     description: "“룩북”의 상세 이미지 페이지입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
     date: "20XX-XX",
     tags: ["photography"],
-    size: "normal",
+    size: "big",
     thumbnail: "01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg"]
   },
