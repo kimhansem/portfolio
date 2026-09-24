@@ -30,7 +30,7 @@ var PROJECTS = [
     description: "“오키도키 서포터즈”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
     date: "20XX-XX",
     tags: ["graphic", "identity"],
-    size: "normal",
+    size: "small",
     thumbnail: "01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg"]
   },
@@ -70,7 +70,7 @@ var PROJECTS = [
     description: "“문학의도”의 또 다른 상세 이미지 페이지입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
     date: "20XX-XX",
     tags: ["editorial"],
-    size: "normal",
+    size: "small",
     thumbnail: "01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg"]
   },
@@ -100,7 +100,7 @@ var PROJECTS = [
     description: "“서울퀴어퍼레이드 포스터”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
     date: "20XX-XX",
     tags: ["graphic"],
-    size: "normal",
+    size: "small",
     thumbnail: "01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg"]
   },
@@ -130,7 +130,7 @@ var PROJECTS = [
     description: "“오너먼츠”에 대한 프로젝트 설명입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
     date: "20XX-XX",
     tags: ["graphic", "motion"],
-    size: "normal",
+    size: "small",
     thumbnail: "01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg"]
   },
@@ -160,7 +160,7 @@ var PROJECTS = [
     description: "“룩북”의 또 다른 상세 이미지 페이지입니다. 이 텍스트를 실제 작업 설명으로 교체해 주세요.",
     date: "20XX-XX",
     tags: ["photography"],
-    size: "normal",
+    size: "small",
     thumbnail: "01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg"]
   },
