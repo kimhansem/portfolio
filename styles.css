@@ -62,7 +62,7 @@ a {
 
 .grid {
   --cols: 4;
-  --gap: 12px;
+  --gap: 8px;
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap);
@@ -77,10 +77,6 @@ a {
 
 .item-small {
   flex-basis: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols) * 3 / 5);
-}
-
-.item-big {
-  flex-basis: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols) * 1.4);
 }
 
 .item-media {
@@ -274,8 +270,7 @@ a {
   }
 
   .item,
-  .item-small,
-  .item-big {
+  .item-small {
     flex-basis: 100%;
   }
 
