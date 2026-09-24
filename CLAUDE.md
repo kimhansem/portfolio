@@ -1,4 +1,5 @@
 # Working rules for this repo
 
-- **Never start implementing/editing on your own initiative.** Before writing or changing any code, config, or file structure, describe what you're about to do and ask for confirmation first. This applies even to small changes.
-- **Never merge to `main` without explicit permission**, even if a PR is already open and green. Ask each time.
+- Freely edit local files (code, config, file structure) without asking for confirmation first.
+- **Never commit or push** — the user does this directly. Only run git write operations (add/commit/push/branch/merge) if the user explicitly asks, e.g. to fix a git-related error.
+- No need to create branches or open/merge PRs — the user pushes directly to `main`, so that workflow isn't used anymore.
